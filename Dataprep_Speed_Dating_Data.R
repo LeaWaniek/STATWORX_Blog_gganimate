@@ -5,14 +5,13 @@ require(tidyr)
 require(data.table)
 require(ggplot2)
 require(viridis)
-require(gganimate)
 require(scales)
 
 '%!in%' <- function(x,y)!('%in%'(x,y))
 
 # Load data 
-# Source: http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/
-df <- data.table::fread("Speed Dating Data.csv")
+source_link <- "http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/Speed%20Dating%20Data.csv"
+df <- data.table::fread(input = source_link)
 
 # Data Plot #1 ------------------------------------------------------------
 # Data structure: one row per pairing of participant and his/her partners 
